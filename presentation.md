@@ -31,6 +31,16 @@ My name is Michael Kalish and I've been a software programmer for the last eight
 - Where we were
 - What containers solved
 
+???
+What is state of developing web applications and virtualization now and how did we get here
+
+---
+
+class: center,middle
+
+Feel free to ask questions in the chat, which I'll periodically check. I'll also occasionally ask a few
+questions, and feel free to use the raise hand feature.
+
 ---
 
 # Where we are today
@@ -38,17 +48,12 @@ My name is Michael Kalish and I've been a software programmer for the last eight
 .bigImage[![From https://steemit.com/programming/@nabilazulfani/the-most-valuable-and-required-programming-capabilities](https://steemitimages.com/DQmarwZtwDs9e4LNyGxg3WeFuTsq69r31uP2qG564NnRjQS/word-cloud-programming.jpg)]
 
 ???
-A great about software engineering is that there are always new things to learn. The downside
+A great thing about software engineering is that there are always new things to learn. The downside
 is that there is so many tools, applications, compilers, operating systems developers often
 face the problem of being confident that the work that they do on their own computers will work the same
 way when there work is published as an app or a website.
 
----
-
-# Where we were
-
-Feel free to ask questions in the chat, which I'll periodically check. I'll also occasionnally ask a few
-questions, and feel free to use the raise hand feature.
+Famous words of every developer "It worked on my machine."
 
 ---
 
@@ -57,8 +62,12 @@ questions, and feel free to use the raise hand feature.
 .bigImage[![IBM](https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/State_diagram_3_state_busy_beaver_2B.svg/500px-State_diagram_3_state_busy_beaver_2B.svg.png)]
 
 ???
+The original makers of the computer was IBM. Think those huge rooms with floor to ceiling computers.
+
 In fact, the only game in town. They offered computers that you could come in and rent; you would get to feed your program
 in one side walk around to the other and it would print out the results. And it worked great.
+
+Downside was that it took a long time to write "programs" that could be executed and only one program could be run at a time meaning no interaction. Insert the program, press play and wait for the results.
 
 ---
 
@@ -66,16 +75,23 @@ in one side walk around to the other and it would print out the results. And it 
 
 .twoCol[.bigImage[![Beatles](https://tse3.mm.bing.net/th?id=OIP.XPjnn__ADJ4gYvS8OVKC8wAAAA&pid=Api)]]
 
+???
+The beatles release their first single in the USA.
+
 ---
 
 ## DARPA(Defense Advanced Research Projects Agency) gives MIT a grant
 
 .twoCol[![Defense Advanced Research Projects Agency](https://media.defense.gov/2018/Jul/31/2001948871/780/780/0/180712-F-SH905-002.JPG)]
 ???
-DARPA also responsible for later helping to develop the internet gives a $2 million grant
-to MIT ($16 million accounting) for research into (Operating Systems, Artificial Intelligence, and Computational Theory.)
+DARPA, also responsible for later helping to develop the internet, gives a $2 million grant
+to MIT ($16 million in today's money) for research into Operating Systems, Artificial Intelligence, and Computational Theory.
 In order to run the new experiments, MIT puts out a bid to a bunch of vendors including IBM and GE, to build a new set
-of computers capabale of running multiple programs at once with user interaction. And of course...
+of computers capabale of running multiple programs at once with user interaction.
+
+Thinking back a few slides this is a very different paradigm than what IBM had available
+
+And of course...
 
 ---
 
@@ -97,7 +113,7 @@ changed. Besides, who else would ever want to buy it?
 
 # Fast Forward - 1968
 
-.twoCol[![Apollo 8](https://tse4.mm.bing.net/th?id=OIP.WbpNqT90ZGU3Jy6UBllBoAHaE-&pid=Api)]
+.twoCol[.bigImage[![Apollo 8](apollo-eight.jpg)]]
 
 ???
 Apollo 8 launches and humans orbit the moon for the first time
@@ -111,10 +127,11 @@ class: center
 ![time sharing](https://ecomputernotes.com/images//thumb552-Time-Sharing-System-Active-State-of-User-5-de35b48fae095e53f5b26bb4f510be39.jpg)
 
 ???
-Turns out, lots of people would want it, which serves as a wakeup call for IBM and the first
-system became available in 1968 and finally commercially in 1972. The way it was worked
-that the system would let different users or processes take turns using the memory and computing
-power of the hardware, things like RAM and CPU.
+Turns out, lots of people would want it based on the early success that GE had, which serves as a wakeup call for IBM and theur first
+system became available in 1968 and finally commercially available in 1972.
+
+The way it was worked that the system would let different users or processes take turns using the memory and computing
+power of the hardware, things like RAM and CPU. The sharing happens so quickly that a person using would not be able to tell and it would appear as if it was all happening simultaneously.
 
 ---
 
@@ -125,8 +142,8 @@ class: center
 .twoCol[![unix](https://upload.wikimedia.org/wikipedia/commons/d/d5/Version_7_Unix_SIMH_PDP11_Emulation_DMR.png)]
 
 ???
-Couple iterations later more on the idea and UNIX is born. UNIX built on the idea and abstracted it further.
-If we can let users share physical hard drives and RAM we can let the share things like folders and documents.
+Couple iterations later more on the idea and UNIX is born. UNIX built on the same idea and abstracted it further.
+If we can let users share physical hard drives, RAM and CPUs, we can let the share things like folders and documents.
 It was virtualization on the user level.
 
 ---
@@ -219,6 +236,8 @@ and additional resources that modern applications like a database.
 Fun fact: Ghent used to be the second largest city in Europe (1300-1400s), famous for its wool
 This is city sanctioned graffitin section.
 
+Before this, Operations and Developers were tightly split into their own areas of responsiblity.
+
 ---
 
 class: center
@@ -235,6 +254,9 @@ Pope Francis joins twitter
 
 .twoCol[![Docker](https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Docker_%28container_engine%29_logo.svg/440px-Docker_%28container_engine%29_logo.svg.png)]
 
+???
+First official release of docker and the ideas of containers. The premise was that it would solve all the problems that current virtualization technology currently did, but with a substantially smaller foot print.
+
 ---
 
 # Simple - How it works
@@ -248,7 +270,7 @@ Removes the hypervisor, and packages the OS and application into one
 
 # Another Diagram
 
-.twoCol[.bigImage[![Docker engine](https://mmorejon.io/images/diagrams/docker-django-wsgi-production.png)]]
+.twoCol[.bigImage[![Docker engine](docker-engine.png)]]
 
 ---
 
@@ -256,7 +278,7 @@ class: center
 
 # Covenient
 
-.twoCol[.image[![Dockerfile](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3sXq4aWgr5yvKiYlxRmpu5udQbqK1p2jUC_i2YojVWf7txsw&s)]]
+.twoCol[.bigImage[![Dockerfile](dockerfile.png)]]
 ???
 Back in 2006, people were entirely responsible for managing and executing these commands by hand, sometimes by memory which lead to inconsitent results. Docker provides a convenient syntax to write them down (though there are other tools that do this successfully) and importantly, the capability of running them ahead time so that the commands are never ran in the incorrect order.
 
@@ -264,11 +286,11 @@ And because we have saved so much space by eliminating guest OS, they are small 
 
 ---
 
-class: center, middle
+class: center
 
-```sh
-docker pull mysql
-```
+# Download a database
+
+.twoCol[.bigImage[![Dockerfile](docker-pull-mysql.png)]]
 
 ---
 
